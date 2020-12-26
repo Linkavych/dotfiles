@@ -1,0 +1,66 @@
+# Call for VIM
+alias vi='vim'
+alias vir='vim -R' # read-only mode
+
+# Fast edits
+alias ea='$EDITOR ~/dotfiles/zsh/aliases'
+alias ed='$EDITOR ~/dotfiles'
+alias et='$EDITOR ~/.tmux.conf'
+alias ev='$EDITOR ~/.vimrc'
+alias ez='$EDITOR ~/.zshrc'
+
+# General Aliases - UNIX
+alias c='clear'
+alias mv='mv -iv'
+alias cp='cp -iv'
+alias rm='rm -i'
+alias df='df -h'
+alias du='du -h'
+alias mkdir='mkdir -pv'
+alias src='source ~/.zshrc'
+
+# Simple Navigation
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
+
+# Files and Directories
+alias l='ls -lFh'     #size,show type,human readable
+alias la='ls -lAFh'   #long list,show almost all,show type,human readable
+alias lr='ls -tRFh'   #sorted by date,recursive,show type,human readable
+alias lt='ls -ltFh'   #long list,sorted by date,show type,human readable
+alias ll='ls -l'      #long list
+alias ldot='ls -ld .*'
+alias lS='ls -1FSsh'
+alias lart='ls -1Fcart'
+alias lrt='ls -1Fcrt'
+alias ld='ls -ld' # Useful for showing permissions of a single directory
+
+# Find things
+alias fd='find . -type d -name'
+alias ff='find . -type f -name'
+
+# Tree things
+alias tree='tree -CF'
+alias t1='tree -L 1'
+alias t2='tree -L 2'
+alias t3='tree -L 3'
+alias t4='tree -L 4'
+
+alias t1a='tree -La 1'
+alias t2a='tree -La 2'
+alias t3a='tree -La 3'
+alias t4a='tree -La 4'
+
+# Oh_My_Zsh Upgrade
+alias upz='upgrade_oh_my_zsh'
+
+
+# Misc - useful for me
+alias server='python3 -m http.server 8000'
+alias ports='sudo netstat -tulanp'
+alias untar='tar -xvfz'
+alias wget='wget -c'
+alias ipe='curl ipinfo.io/ip'
+alias td='td -i'
