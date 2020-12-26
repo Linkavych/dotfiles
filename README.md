@@ -1,2 +1,7 @@
 # dotfiles
-What it says...
+Personal dotfiles for basic system configuration.
+- Vim
+- Bash
+- Zsh
+- tmux
+- aliases
