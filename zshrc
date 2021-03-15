@@ -103,3 +103,6 @@ source ~/.aliases
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Created by `userpath` on 2020-12-31 16:20:03
+export PATH="$PATH:/home/linkavych/.local/bin:/usr/local/zeek/bin"

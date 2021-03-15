@@ -64,3 +64,6 @@ alias untar='tar -xvfz'
 alias wget='wget -c'
 alias ipe='curl ipinfo.io/ip'
 alias td='td -i'
+
+# Packet stuff
+alias capinfos='TZ=UTC capinfos' # sets timezone for capinfos to UTC instead of epoch time
