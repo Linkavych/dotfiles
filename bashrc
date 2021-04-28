@@ -132,3 +132,19 @@ PATH=$PATH:/home/linkavych/bin
 
 # Created by `userpath` on 2020-08-26 00:06:21
 export PATH="$PATH:/home/linkavych/.local/bin"
+
+# Bash Completion
+# Use bash-completion, if available
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+    . /usr/share/bash-completion/bash_completion
+
+# Powerline for Bash
+if [ -f `which powerline-daemon` ]; then
+    powerline-daemon -q
+    POWERLINE_BASH_CONTINUATION=1
+    POWERLINE_BASH_SELECT=1
+fi
+if [ -f /usr/local/lib/python3.8/dist-packages/powerline/bindings/bash/powerline.sh ]; then
+    source /usr/local/lib/python3.8/dist-packages/powerline/bindings/bash/powerline.sh
+fi
+
