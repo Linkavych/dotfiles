@@ -15,14 +15,19 @@
 
 	# Commit all changes.
 	ca = !git add -A && git commit -av
+        cam = commit -a -m
 	
 	# Add
 	a = add
 	aa = add --all
 
 	# Branches
-	b = branch
+	b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'" 
 	ba = branch --all
+
+        # Checkout
+        co = checkout
+        cob = checkout -b
 
 	# Pushes
 	pum = push -u origin master
