@@ -90,7 +90,6 @@ sudo apt-get install -y \
     xclip \
     xsel 
 
-    
 
 ########
 # RUST #
@@ -149,13 +148,13 @@ cd ~
 sudo python3 -m pip install powerline-status
 sudo python3 -m pip install powerline-gitstatus
 
-mkdir -p ~/.config/powerline/themes
+mkdir -p ~/.config/powerline/themes/shell
 mkdir -p ~/.config/powerline/colorschemes
 
 ln -s ~/opt/dotfiles/powerline_color_default.json ~/.config/powerline/colorschemes/default.json
 ln -s ~/opt/dotfiles/powerline_themes_shell_default.json ~/.config/powerline/themes/shell/default.json
 
-sudp cp ~/opt/dotfiles/powerline_color_default.json /usr/local/lib/python3.8/dist-packages/powerline/config_files/colorschemes/default.json --force
+sudo cp ~/opt/dotfiles/powerline_color_default.json /usr/local/lib/python3.8/dist-packages/powerline/config_files/colorschemes/default.json --force
 sudo cp ~/opt/dotfiles/powerline_themes_shell_default.json /usr/local/lib/python3.8/dist-packages/powerline/config_files/themes/shell/default.json --force
 
 

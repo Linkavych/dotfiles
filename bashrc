@@ -148,3 +148,4 @@ if [ -f /usr/local/lib/python3.8/dist-packages/powerline/bindings/bash/powerline
     source /usr/local/lib/python3.8/dist-packages/powerline/bindings/bash/powerline.sh
 fi
 
+source "$HOME/.cargo/env"
