@@ -52,6 +52,10 @@ ln -s ~/opt/dotfiles/tmux.conf  ~/.tmux.conf
 ln -s ~/opt/dotfiles/aliases ~/.aliases
 
 
+# Making things non-interactive now
+export DEBIAN_FRONTEND=noninteractive
+
+
 ##################################
 # Main Utilities and Other Items #
 ##################################
@@ -89,6 +93,14 @@ sudo apt-get install -y \
     vlc \
     xclip \
     xsel 
+
+
+#############
+# Wireshark #
+#############
+sudo add-apt-repository ppa:wireshark-dev/stable
+sudo apt update -y
+sudo apt install wireshark tshark -y
 
 
 ########
@@ -188,4 +200,6 @@ cd ~
 ############
 # Finished #
 ############
-echo "[+] Script is complete!\n[+] Enjoy!\n"
+echo "[+] Script is complete!"
+echo "[+] Enjoy!"
+echo
