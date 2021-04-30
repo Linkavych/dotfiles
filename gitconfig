@@ -44,7 +44,7 @@
 	editor = vim
 
 [commit]
-	template = ~/.gitmessage.txt
+	template = ~/.gitmessage
 
 [init]
 	defaultBranch = main
