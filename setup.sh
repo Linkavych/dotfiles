@@ -50,7 +50,7 @@ ln -s ~/opt/dotfiles/vimrc ~/.vimrc
 ln -s ~/opt/dotfiles/gitconfig ~/.gitconfig
 ln -s ~/opt/dotfiles/tmux.conf  ~/.tmux.conf
 ln -s ~/opt/dotfiles/aliases ~/.aliases
-
+ln -s ~/opt/dotfiles/gitmessage ~/.gitmessage
 
 # Making things non-interactive now
 export DEBIAN_FRONTEND=noninteractive
