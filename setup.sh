@@ -79,6 +79,7 @@ sudo apt-get install -y \
     nmap \
     nodejs \
     npm \
+    openssh-server \
     python3-dev \
     python3-pip \
     python3-setuptools \
@@ -192,9 +193,16 @@ cd ~
 python3 -m venv ~/dev/nornir
 cd ~/dev/nornir
 source bin/activate
-python3 -m pip3 install nornir
+python3 -m pip install nornir
 deactivate
 cd ~
+
+
+###################
+# UFW Basic Setup #
+###################
+sudo ufw enable
+sudo ufw allow ssh
 
 
 ############
