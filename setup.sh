@@ -155,6 +155,14 @@ python3 ~/.vim/bundle/youcompleteme/install.py --all
 cd ~
 
 
+################
+# TMUX Plugins #
+################
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+# Other TMUX Plugins in tmux.conf and are loaded when TMUX is ran the
+# first time with C-a + I
+
+
 #############
 # Powerline #
 #############

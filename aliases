@@ -67,3 +67,6 @@ alias td='td -i'
 
 # Packet stuff
 alias capinfos='TZ=UTC capinfos' # sets timezone for capinfos to UTC instead of epoch time
+
+# Ping at 5 count
+alias ping='ping -c 5'
