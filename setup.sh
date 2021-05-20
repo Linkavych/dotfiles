@@ -52,6 +52,7 @@ ln -s ~/opt/dotfiles/aliases ~/.aliases
 ln -s ~/opt/dotfiles/gitmessage ~/.gitmessage
 ln -s ~/opt/dotfiles/git-completion.bash ~/.git-completion.bash
 ln -s ~/opt/dotfiles/git-prompt.sh ~/.git-prompt.sh
+ln -s ~/opt/dotfiles/alacritty.yml ~/.config/alacritty.yml
 
 # Making things non-interactive now
 export DEBIAN_FRONTEND=noninteractive
@@ -73,6 +74,9 @@ sudo apt-get install -y \
     graphviz \
     htop \
     imagemagick \
+    libfreetyp6-dev \
+    libfontconfig1-dev \
+    libxcb-xfixes0-dev \
     make \
     mlocate \
     mono-complete \
@@ -81,6 +85,7 @@ sudo apt-get install -y \
     nodejs \
     npm \
     openssh-server \
+    pkg-config \
     python3-dev \
     python3-pip \
     python3-setuptools \
@@ -178,6 +183,27 @@ python3 -m pip install matplotlib cryptography
 deactivate
 cd ~
 
+#####################
+#		    #
+# Alacritty Install #
+#		    #
+#####################
+
+cd ~/opt/
+git clone https://github.com/alacritty/alacritty.git
+cd ~/opt/alacritty
+cargo build --release
+sudo tic -xe alacritty,alacritty-direct extra/alacritty.info
+sudo cp target/release/alacritty /usr/local/bin # or anywhere else in $PATH
+sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
+sudo desktop-file-install extra/linux/Alacritty.desktop
+sudo update-desktop-database
+sudo mkdir -p /usr/local/share/man/man1
+gzip -c extra/alacritty.man | sudo tee /usr/local/share/man/man1/alacritty.1.gz > /dev/null
+cd ~
+
+sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/local/bin/alacritty 50
+echo "[+] Alacritty installed as default terminal!"
 
 ###################
 # UFW Basic Setup #
