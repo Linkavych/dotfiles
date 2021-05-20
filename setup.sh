@@ -30,7 +30,6 @@ rmdir ~/Templates \
 
 # Create new directories
 mkdir -p ~/dev/scapy \
-         ~/dev/nornir \
          ~/bin \
          ~/opt \
          ~/.ssh
@@ -51,6 +50,7 @@ ln -s ~/opt/dotfiles/gitconfig ~/.gitconfig
 ln -s ~/opt/dotfiles/tmux.conf  ~/.tmux.conf
 ln -s ~/opt/dotfiles/aliases ~/.aliases
 ln -s ~/opt/dotfiles/gitmessage ~/.gitmessage
+ln -s ~/opt/dotfiles/git-completion.bash ~/.gitcompletion.bash
 
 # Making things non-interactive now
 export DEBIAN_FRONTEND=noninteractive
@@ -163,22 +163,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # first time with C-a + I
 
 
-#############
-# Powerline #
-#############
-sudo python3 -m pip install powerline-status
-sudo python3 -m pip install powerline-gitstatus
-
-mkdir -p ~/.config/powerline/themes/shell
-mkdir -p ~/.config/powerline/colorschemes
-
-ln -s ~/opt/dotfiles/powerline_color_default.json ~/.config/powerline/colorschemes/default.json
-ln -s ~/opt/dotfiles/powerline_themes_shell_default.json ~/.config/powerline/themes/shell/default.json
-
-sudo cp ~/opt/dotfiles/powerline_color_default.json /usr/local/lib/python3.8/dist-packages/powerline/config_files/colorschemes/default.json --force
-sudo cp ~/opt/dotfiles/powerline_themes_shell_default.json /usr/local/lib/python3.8/dist-packages/powerline/config_files/themes/shell/default.json --force
-
-
 #########
 # Scapy #
 #########
@@ -190,18 +174,6 @@ git clone https://github.com/secdev/scapy.git
 cd scapy
 python3 setup.py install
 python3 -m pip install matplotlib cryptography 
-deactivate
-cd ~
-
-
-##########
-# Nornir #
-##########
-# Create a virtual environment then install
-python3 -m venv ~/dev/nornir
-cd ~/dev/nornir
-source bin/activate
-python3 -m pip install nornir
 deactivate
 cd ~
 

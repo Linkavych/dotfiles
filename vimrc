@@ -107,7 +107,7 @@ let g:airline_powerline_fonts=1
 
 " UTF8 encoding for python
 set encoding=utf-8
-set colorcolomn=72
+set colorcolumn=72
 
 " call nerdtree
 autocmd vimenter * NERDTree

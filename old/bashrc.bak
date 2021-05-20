@@ -118,7 +118,7 @@ if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
-# Enable TMUX on Start
+# Attach or create a new tmux session on start
 if [[ -z "$TMUX" ]]; then
 	tmux attach -t main || tmux new -s main
 fi
@@ -143,11 +143,14 @@ export PATH="$PATH:/home/linkavych/.local/bin"
 [[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
     . /usr/share/bash-completion/bash_completion
 
-# Git Prompt
-PROMPT_COMMAND='__git_ps1 "\[\e[0;3;32m\]\u\[\e[0m\]-\[\e[0m\]> \[\e[0;38;5;178m\]\w\[\e[0m\]" "\\\$ "'
-GIT_PS1_SHOWDIRTYSTATE=1
-GIT_PS1_SHOWCOLORHINTS=1
-
-source ~/.git-prompt.sh
+# Powerline for Bash
+if [ -f `which powerline-daemon` ]; then
+    powerline-daemon -q
+    POWERLINE_BASH_CONTINUATION=1
+    POWERLINE_BASH_SELECT=1
+fi
+if [ -f /usr/local/lib/python3.8/dist-packages/powerline/bindings/bash/powerline.sh ]; then
+    source /usr/local/lib/python3.8/dist-packages/powerline/bindings/bash/powerline.sh
+fi
 source ~/.git-completion.bash
 source "$HOME/.cargo/env"
