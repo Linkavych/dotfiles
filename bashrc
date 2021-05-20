@@ -118,11 +118,6 @@ if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
-# Enable TMUX on Start
-if [[ -z "$TMUX" ]]; then
-	tmux attach -t main || tmux new -s main
-fi
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
