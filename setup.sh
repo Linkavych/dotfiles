@@ -50,7 +50,8 @@ ln -s ~/opt/dotfiles/gitconfig ~/.gitconfig
 ln -s ~/opt/dotfiles/tmux.conf  ~/.tmux.conf
 ln -s ~/opt/dotfiles/aliases ~/.aliases
 ln -s ~/opt/dotfiles/gitmessage ~/.gitmessage
-ln -s ~/opt/dotfiles/git-completion.bash ~/.gitcompletion.bash
+ln -s ~/opt/dotfiles/git-completion.bash ~/.git-completion.bash
+ln -s ~/opt/dotfiles/git-prompt.sh ~/.git-prompt.sh
 
 # Making things non-interactive now
 export DEBIAN_FRONTEND=noninteractive
