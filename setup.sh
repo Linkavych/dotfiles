@@ -74,7 +74,7 @@ sudo apt-get install -y \
     graphviz \
     htop \
     imagemagick \
-    libfreetyp6-dev \
+    libfreetype6-dev \
     libfontconfig1-dev \
     libxcb-xfixes0-dev \
     make \
@@ -83,7 +83,7 @@ sudo apt-get install -y \
     neofetch \
     nmap \
     nodejs \
-    npm \
+#    npm \
     openssh-server \
     pkg-config \
     python3-dev \
