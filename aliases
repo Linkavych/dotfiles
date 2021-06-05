@@ -3,11 +3,11 @@ alias vi='vim'
 alias vir='vim -R' # read-only mode
 
 # Fast edits
-alias ea='$EDITOR ~/dotfiles/zsh/aliases'
+alias ea='$EDITOR ~/dotfiles/aliases'
 alias ed='$EDITOR ~/dotfiles'
 alias et='$EDITOR ~/.tmux.conf'
 alias ev='$EDITOR ~/.vimrc'
-alias ez='$EDITOR ~/.zshrc'
+alias eb='$EDITOR ~/.bashrc'
 
 # General Aliases - UNIX
 alias c='clear'
@@ -17,7 +17,7 @@ alias rm='rm -i'
 alias df='df -h'
 alias du='du -h'
 alias mkdir='mkdir -pv'
-alias src='source ~/.zshrc'
+alias src='source ~/.bashrc'
 
 # Simple Navigation
 alias ..='cd ..'
