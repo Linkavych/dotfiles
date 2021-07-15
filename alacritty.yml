@@ -264,56 +264,58 @@ draw_bold_text_with_bright_colors: true
 
 # Colors (Gruvbox Material Dark Hard)
 # https://gist.github.com/sainnhe/587a1bba123cb25a3ed83ced613c20c0
-colors:
-  primary:
-    background: '0x1d2021'
-    foreground: '0xd4be98'
+#colors:
+schemes:
+  gruvbox_material_dark_hard: &gruvbox_material_dark_hard
+    primary:
+      background: '0x1d2021'
+      foreground: '0xd4be98'
 
-  normal:
-    black:   '0x665c54'
-    red:     '0xea6962'
-    green:   '0xa9b665'
-    yellow:  '0xd8a657'
-    blue:    '0x7daea3'
-    magenta: '0xd3869b'
-    cyan:    '0x89b482'
-    white:   '0xd4be98'
+    normal:
+      black:   '0x665c54'
+      red:     '0xea6962'
+      green:   '0xa9b665'
+      yellow:  '0xd8a657'
+      blue:    '0x7daea3'
+      magenta: '0xd3869b'
+      cyan:    '0x89b482'
+      white:   '0xd4be98'
 
-  bright:
-    black:   '0x928374'
-    red:     '0xea6962'
-    green:   '0xa9b665'
-    yellow:  '0xd8a657'
-    blue:    '0x7daea3'
-    magenta: '0xd3869b'
-    cyan:    '0x89b482'
-    white:   '0xd4be98'
+    bright:
+      black:   '0x928374'
+      red:     '0xea6962'
+      green:   '0xa9b665'
+      yellow:  '0xd8a657'
+      blue:    '0x7daea3'
+      magenta: '0xd3869b'
+      cyan:    '0x89b482'
+      white:   '0xd4be98'
 
 ## Colors (Gruvbox Material Dark Medium)
-#colors:
-#  primary:
-#    background: '0x282828'
-#    foreground: '0xdfbf8e'
-#
-#  normal:
-#    black:   '0x665c54'
-#    red:     '0xea6962'
-#    green:   '0xa9b665'
-#    yellow:  '0xe78a4e'
-#    blue:    '0x7daea3'
-#    magenta: '0xd3869b'
-#    cyan:    '0x89b482'
-#    white:   '0xdfbf8e'
-#
-#  bright:
-#    black:   '0x928374'
-#    red:     '0xea6962'
-#    green:   '0xa9b665'
-#    yellow:  '0xe3a84e'
-#    blue:    '0x7daea3'
-#    magenta: '0xd3869b'
-#    cyan:    '0x89b482'
-#    white:   '0xdfbf8e'
+  gruvbox_material_dark_medium: &gruvbox_material_dark_medium
+    primary:
+      background: '0x282828'
+      foreground: '0xdfbf8e'
+
+    normal:
+      black:   '0x665c54'
+      red:     '0xea6962'
+      green:   '0xa9b665'
+      yellow:  '0xe78a4e'
+      blue:    '0x7daea3'
+      magenta: '0xd3869b'
+      cyan:    '0x89b482'
+      white:   '0xdfbf8e'
+
+    bright:
+      black:   '0x928374'
+      red:     '0xea6962'
+      green:   '0xa9b665'
+      yellow:  '0xe3a84e'
+      blue:    '0x7daea3'
+      magenta: '0xd3869b'
+      cyan:    '0x89b482'
+      white:   '0xdfbf8e'
 
 # Colors (Gruvbox dark)
 #colors:
@@ -489,33 +491,39 @@ colors:
 #     white:   '0x282a2e'
 
 # Colors (Seoul256)
-# colors:
-#   # Default colors
-#   primary:
-#     background: '0x3a3a3a'
-#     foreground: '0xd0d0d0'
-#
-#   # Normal colors
-#   normal:
-#     black:   '0x4e4e4e'
-#     red:     '0xd68787'
-#     green:   '0x5f865f'
-#     yellow:  '0xd8af5f'
-#     blue:    '0x85add4'
-#     magenta: '0xd7afaf'
-#     cyan:    '0x87afaf'
-#     white:   '0xd0d0d0'
-#
-#   # Bright colors
-#   bright:
-#     black:   '0x626262'
-#     red:     '0xd75f87'
-#     green:   '0x87af87'
-#     yellow:  '0xffd787'
-#     blue:    '0xadd4fb'
-#     magenta: '0xffafaf'
-#     cyan:    '0x87d7d7'
-#     white:   '0xe4e4e4'
+  seoul_256: &seoul_256
+    primary:
+      background: '0x3a3a3a'
+      foreground: '0xd0d0d0'
+
+     # Normal colors
+    normal:
+      black:   '0x4e4e4e'
+      red:     '0xd68787'
+      green:   '0x5f865f'
+      yellow:  '0xd8af5f'
+      blue:    '0x85add4'
+      magenta: '0xd7afaf'
+      cyan:    '0x87afaf'
+      white:   '0xd0d0d0'
+
+     # Bright colors
+    bright:
+      black:   '0x626262'
+      red:     '0xd75f87'
+      green:   '0x87af87'
+      yellow:  '0xffd787'
+      blue:    '0xadd4fb'
+      magenta: '0xffafaf'
+      cyan:    '0x87d7d7'
+      white:   '0xe4e4e4'
+
+  screenshot: &screenshot
+    primary:
+      background: '0xeaeaea'
+      foreground: '0x000000'
+
+colors: *seoul_256
 
 # Colors (Darkside)
 # colors:
@@ -924,6 +932,7 @@ mouse_bindings:
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
 key_bindings:
+  - { key: F, mods: Control, command: {program: "set_alacritty_colors.py"} }
   - { key: V,        mods: Control|Shift,    action: Paste               }
   - { key: C,        mods: Control|Shift,    action: Copy                }
   - { key: V,        mods: Control|Alt,      action: Paste               }
