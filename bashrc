@@ -139,10 +139,16 @@ export PATH="$PATH:/home/linkavych/.local/bin"
     . /usr/share/bash-completion/bash_completion
 
 # Git Prompt
-PROMPT_COMMAND='__git_ps1 "\[\e[0;3;32m\]\u\[\e[0m\]-\[\e[0m\]> \[\e[0;38;5;178m\]\w\[\e[0m\]" "\\\$ "'
-GIT_PS1_SHOWDIRTYSTATE=1
-GIT_PS1_SHOWCOLORHINTS=1
+#PROMPT_COMMAND='__git_ps1 "\[\e[0;3;32m\]\u\[\e[0m\]-\[\e[0m\]> \[\e[0;38;5;178m\]\w\[\e[0m\]" "\\\$ "'
+#GIT_PS1_SHOWDIRTYSTATE=1
+#GIT_PS1_SHOWCOLORHINTS=1
 
-source ~/.git-prompt.sh
+#source ~/.git-prompt.sh
 source ~/.git-completion.bash
 source "$HOME/.cargo/env"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+eval "$(starship init bash)"
+export STARSHIP_CONFIG=~/.config/starship.toml
+
