@@ -12,4 +12,4 @@ slstatus &
 ~/.fehbg &
 
 # Start dwm last
-exec dbus-launch dwm
+exec ssh-agent dbus-launch dwm

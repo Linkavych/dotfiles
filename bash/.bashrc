@@ -68,6 +68,14 @@ if [[ -f /usr/local/share/bash-completion/bash_completion.sh ]]; then
     source /usr/local/share/bash-completion/bash_completion.sh
 fi
 
+# ssh-agent stuff
+if [ ! -S ~/.ssh/ssh_auth_sock ]; then
+  eval `ssh-agent`
+  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
+fi
+export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
+ssh-add -l > /dev/null || ssh-add
+
 # PLUGINS
 # Extractor Function
 # # ex = EXtractor for all kinds of archives
