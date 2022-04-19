@@ -1,0 +1,60 @@
+[alias]
+        # View abbreviated SHA, description, and history graph of the latest 20 commits.
+	l = log --pretty=oneline -n 20 --graph --abbrev-commit
+
+	# View the current working tree status using the short format.
+	s = status --short --branch
+
+	# Show the diff between the latest commit and the current state.
+	d = !"git diff-index --quiet HEAD -- || clear; git --no-pager diff --patch-with-stat"
+	# Pull in remote changes for the current repository and all its submodules.
+	p = pull --recurse-submodules
+
+	# Clone a repository including all submodules.
+	c = clone --recursive
+
+	# Commit all changes.
+	ca = !git add -A && git commit -av
+        cam = commit -a -m
+	
+	# Add
+	a = add
+	aa = add --all
+
+	# Branches
+	b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'" 
+	ba = branch --all
+
+        # Checkout
+        co = checkout
+        cob = checkout -b
+
+	# Pushes
+	pum = push -u origin master
+	ps = push
+
+	# Resets
+	unstage = reset
+	uncommit = reset --soft HEAD^
+
+[color]
+	ui = auto
+
+[core]
+	editor = vim
+
+[commit]
+	template = ~/.gitmessage
+
+[init]
+	defaultBranch = main
+
+[user]
+	name = Adam V. Link 
+	email = linkavych@gmail.com
+
+[github]
+	user = linkavych
+
+[include]
+	path = ~/.gitconfig_local

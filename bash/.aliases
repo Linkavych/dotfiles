@@ -1,0 +1,85 @@
+#------------------#
+#  Basic Commands  #
+#------------------#
+#alias ls='ls -G'
+#alias la='ls -laFh' # long, show almost all, show type, human read
+#alias lr='ls -tRFh' # sorted by date, recursive, show type, human
+#alias l='ls -lFh' # long, show type, human read
+#alias lt='ls -ltFh' # long, sorted by date, show type, human read
+#alias lart='ls -lFcart'
+# Using EXA instead
+
+alias fd='find . -type d -name'
+alias ff='find . -type f -name'
+
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+alias c='clear'
+alias mv='mv -iv'
+alias cp='cp -iv'
+alias rm='rm -i'
+alias df='df -h'
+alias du='du -h'
+alias mkdir='mkdir -pv'
+alias src='source ~/.bashrc'
+
+#------------------#
+#        exa       #
+#------------------#
+alias ls='exa --icons'
+alias la='ls --all --long --header --git --group'
+alias ll='ls --all --long --header --git --extended --group'
+alias lr='ls --all --long --header --git --group --recurse --level=2'
+alias l='ls --long --header --git --group'
+alias lt='ls --long --header --git --group --sort=modified --reverse'
+alias tree='ls --long --all --header --git --group --recurse --level=2 --tree'
+
+#------------------#
+#   Network Info   #
+#------------------#
+alias ports='sockstat -l'
+alias cons='lsof -i'
+alias ping='ping -c 5'
+
+#------------------#
+#       NeoVim     #
+#------------------#
+alias vim='nvim'
+
+#------------------#
+#    Quick Edit    #
+#------------------#
+alias vb="$EDITOR ~/.bashrc"
+alias vh="doas $EDITOR /etc/hosts"
+alias va="$EDITOR ~/.aliases"
+alias vv="$EDITOR ~/.config/nvim/init.vim"
+
+#------------------#
+#     Useful       #
+#------------------#
+alias wget="wget -c" # continue the download
+alias userlist="cut -d: -f1 /etc/passwd"
+
+#------------------#
+#     Shutdown     #
+#------------------#
+alias sss='doas shutdown -p now'
+alias rrr='doas shutdown -r now'
+
+#------------------#
+#     X Aliases    #
+#------------------#
+alias x='startx'
+
+#------------------#
+#     VM Stuff     #
+#------------------#
+alias ubuntuvm='bhyve -c 2 -m 4G -w -H -s 0,hostbridge -s 3,ahci-cd,/tmp/ubuntu-20.04.4-desktop-amd64.iso -s 4,virtio-blk,/dev/zvol/zroot/ubuntu -s 5,virtio-net,tap0 -s 29,fbuf,tcp=0.0.0.0:5900,w=800,h=600,wait -s 30,xhci,tablet -s 31,lpc -l com1,stdio -l bootrom,/usr/local/share/uefi-firmware/BHYVE_UEFI.fd ubuntu'
+
+#------------------#
+#    libreoffice   #
+#------------------#
+alias writer='libreoffice --writer &'
+alias calc='libreoffice --calc &'

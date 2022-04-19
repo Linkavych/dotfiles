@@ -1,0 +1,95 @@
+format = """
+${custom.timezone}\n\
+$username\
+$hostname\
+$shlvl\
+$kubernetes\
+$directory\
+$vcsh\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$hg_branch\
+$docker_context\
+$package\
+$cmake\
+$dart\
+$deno\
+$dotnet\
+$elixir\
+$elm\
+$erlang\
+$golang\
+$helm\
+$java\
+$julia\
+$kotlin\
+$nim\
+$nodejs\
+$ocaml\
+$perl\
+$php\
+$purescript\
+$python\
+$red\
+$ruby\
+$rust\
+$scala\
+$swift\
+$terraform\
+$vlang\
+$vagrant\
+$zig\
+$nix_shell\
+$conda\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$env_var\
+$crystal\
+$custom\
+$cmd_duration\
+$line_break\
+$lua\
+$jobs\
+$battery\
+$time\
+$status\
+$shell\
+$character"""
+
+
+[character]
+format = "$symbol "
+success_symbol = "[Δ](bold green)"
+error_symbol = "[⛔](bold red)"
+
+[custom.timezone]
+command = 'date +"%a %b %d %Y %R (%Z%z)"'
+when = "true"
+format = '[\[$symbol($output)\]](green)'
+
+[directory]
+truncation_length = 4
+truncate_to_repo = false
+style = "bold blue"
+disabled = false
+
+
+[username]
+style_root = "bold red"
+style_user = "bold yellow"
+format = "[$user]($style) in "
+show_always = true
+disabled = false
+
+
+#
+# Disabled Modules
+#
+
+[time]
+disabled = true
