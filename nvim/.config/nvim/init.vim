@@ -39,6 +39,12 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
+" airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+Plug 'Pocco81/TrueZen.nvim'
+
 call plug#end()
 
 colorscheme gruvbox
@@ -55,6 +61,15 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+nnoremap <leader>zz <cmd>TZAtaraxis<cr>
+
+nnoremap <leader>gb <cmd>Git blame<cr>
+nnoremap <leader>gc <cmd>Git commit<cr>
+nnoremap <leader>gp <cmd>Gpush<cr>
+nnoremap <leader>gl <cmd>Git log<cr>
+nnoremap <leader>ga <cmd>Gwrite<cr>
+nnoremap <leader>gs <cmd>Git<cr>
 
 xnoremap <leader>p "_dP
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
@@ -83,3 +98,5 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='molokai'
