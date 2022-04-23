@@ -66,7 +66,7 @@ nnoremap <leader>zz <cmd>TZAtaraxis<cr>
 
 nnoremap <leader>gb <cmd>Git blame<cr>
 nnoremap <leader>gc <cmd>Git commit<cr>
-nnoremap <leader>gp <cmd>Gpush<cr>
+nnoremap <leader>gp <cmd>Git push<cr>
 nnoremap <leader>gl <cmd>Git log<cr>
 nnoremap <leader>ga <cmd>Gwrite<cr>
 nnoremap <leader>gs <cmd>Git<cr>
