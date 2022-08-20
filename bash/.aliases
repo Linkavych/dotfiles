@@ -39,7 +39,7 @@ alias tree='ls --long --all --header --git --group --recurse --level=2 --tree'
 #------------------#
 #   Network Info   #
 #------------------#
-alias ports='sockstat -l'
+#alias ports='sockstat -l'
 alias cons='lsof -i'
 alias ping='ping -c 5'
 
@@ -52,7 +52,7 @@ alias vim='nvim'
 #    Quick Edit    #
 #------------------#
 alias vb="$EDITOR ~/.bashrc"
-alias vh="doas $EDITOR /etc/hosts"
+alias vh="sudo $EDITOR /etc/hosts"
 alias va="$EDITOR ~/.aliases"
 alias vv="$EDITOR ~/.config/nvim/init.vim"
 
@@ -67,16 +67,6 @@ alias userlist="cut -d: -f1 /etc/passwd"
 #------------------#
 alias sss='doas shutdown -p now'
 alias rrr='doas shutdown -r now'
-
-#------------------#
-#     X Aliases    #
-#------------------#
-alias x='startx'
-
-#------------------#
-#     VM Stuff     #
-#------------------#
-alias ubuntuvm='bhyve -c 2 -m 4G -w -H -s 0,hostbridge -s 3,ahci-cd,/tmp/ubuntu-20.04.4-desktop-amd64.iso -s 4,virtio-blk,/dev/zvol/zroot/ubuntu -s 5,virtio-net,tap0 -s 29,fbuf,tcp=0.0.0.0:5900,w=800,h=600,wait -s 30,xhci,tablet -s 31,lpc -l com1,stdio -l bootrom,/usr/local/share/uefi-firmware/BHYVE_UEFI.fd ubuntu'
 
 #------------------#
 #    libreoffice   #

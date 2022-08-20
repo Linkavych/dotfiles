@@ -64,8 +64,8 @@ if [[ -n $force_color_prompt ]]; then
 fi
 
 # Enable bash completion
-if [[ -f /usr/local/share/bash-completion/bash_completion.sh ]]; then
-    source /usr/local/share/bash-completion/bash_completion.sh
+if [[ -f /usr/share/bash-completion/bash_completion.sh ]]; then
+    source /usr/share/bash-completion/bash_completion.sh
 fi
 
 # ssh-agent stuff
@@ -106,9 +106,9 @@ ex ()
 }
 
 # fzf
-if [[ -d '/usr/local/share/examples/fzf' ]]; then
-    source /usr/local/share/examples/fzf/shell/completion.bash
-    source /usr/local/share/examples/fzf/shell/key-bindings.bash
+if [[ -d '/usr/share/examples/fzf' ]]; then
+    source /usr/share/examples/fzf/shell/completion.bash
+    source /usr/share/examples/fzf/shell/key-bindings.bash
 fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
@@ -122,8 +122,8 @@ fi
 # Starship Prompt
 eval "$(starship init bash)"
 
-# Run neofetch
-#neofetch
-
 # Rust Stuff
 . "$HOME/.cargo/env"
+
+# API Stuff for malware
+source ~/.config/malware.sh

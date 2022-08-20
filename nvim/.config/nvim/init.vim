@@ -88,7 +88,6 @@ if (empty($TMUX))
   endif
 endif
 
-
 " Syntastic settings
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}

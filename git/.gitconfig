@@ -41,10 +41,11 @@
 	ui = auto
 
 [core]
-	editor = vim
+	editor = nvim
 
 [commit]
 	template = ~/.gitmessage
+	gpgsign = true
 
 [init]
 	defaultBranch = main
@@ -52,6 +53,7 @@
 [user]
 	name = Adam V. Link 
 	email = linkavych@gmail.com
+	signingkey = 3936F84906C6C3C8
 
 [github]
 	user = linkavych
