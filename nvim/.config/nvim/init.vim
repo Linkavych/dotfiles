@@ -34,6 +34,9 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 Plug 'romgrk/nvim-treesitter-context'
 
+" Autopairs
+Plug 'jiangmiao/auto-pairs'
+
 " Telescope Vim
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
