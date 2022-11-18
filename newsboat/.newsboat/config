@@ -1,0 +1,28 @@
+max-items       50
+browser         "firefox --new-tab %u"
+cleanup-on-quit yes
+
+download-retries 5
+download-timeout 60
+
+auto-reload yes
+reload-time 120
+reload-threads 50
+
+
+# colors
+color background          black      default
+color listnormal          color8     default
+color listnormal_unread   green      default bold
+color listfocus           white     blue bold
+color listfocus_unread    yellow     blue bold
+color info                cyan      color235 bold standout
+color article             white      default
+
+# highlights
+highlight article "^(Feed|Link):.*$" yellow default bold
+highlight article "^(Title|Date|Author):.*$" yellow default bold
+highlight article "https?://[^ ]+" blue default underline
+highlight article "\\[[0-9]+\\]" yellow default bold
+highlight article "\\[image\\ [0-9]+\\]" yellow default bold
+highlight feedlist "^─.*$" yellow color235 bold
