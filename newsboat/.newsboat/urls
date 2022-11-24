@@ -4,35 +4,35 @@
 https://feeds.feedburner.com/TheHackersNews
 https://www.bleepingcomputer.com/feed/
 https://www.darkreading.com/rss.xml
-
+https://security-soup.net/feed/
+https://www.exploit-db.com/rss.xml
 
 " =============================================================================
 " =====> BLOGS ================================================================
 " =============================================================================
 https://www.unixsheikh.com/feed.rss
 https://danielmiessler.com/blog/feed/
-
-
+https://www.hexacorn.com/blog/feed
 
 " =============================================================================
 " =====> FORENSICS ============================================================
 " =============================================================================
 https://thedfirreport.com/feed/
 https://thisweekin4n6.com/feed/
-
-
+https://www.netresec.com/rss.ashx
+https://www.malware-traffic-analysis.net/blog-entries.rss
 
 " =============================================================================
 " =====> THREAT INTEL =========================================================
 " =============================================================================
 https://blog.google/threat-analysis-group/rss/
 http://googleprojectzero.blogspot.com/feeds/posts/default
-https://www.microsoft.com/en-us/security/blog/en-us/security/blog/tag/microsoft-security-intelligence/feed/
+https://www.microsoft.com/en-us/security/blog/tag/microsoft-security-intelligence/feed
 https://feeds.feedburner.com/TrendMicroSimplySecurity
 https://research.checkpoint.com/category/threat-research/feed/
 https://www.recordedfuture.com/feed
 http://threatpost.com/feed/
-
+https://www.dragos.com/resources/feed
 
 " =============================================================================
 " =====> GOVERNMENT============================================================

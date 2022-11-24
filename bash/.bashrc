@@ -36,6 +36,10 @@ shopt -s dotglob
 HISTSIZE=10000
 HISTFILESIZE=2000
 
+# History time format
+# UNIX YEAR-MO-DAY HR:MIN:SEC-TZ
+HISTTIMEFORMAT="%s %F %R-%Z "
+
 # Check window size
 shopt -s checkwinsize
 
@@ -97,6 +101,7 @@ ex ()
       *.7z)        7z x $1      ;;
       *.deb)       ar x $1      ;;
       *.tar.xz)    tar xf $1    ;;
+      *.txz)       tar xf $1    ;;
       *.tar.zst)   tar xf $1    ;;
       *)           echo "'$1' cannot be extracted via ex()" ;;
     esac
