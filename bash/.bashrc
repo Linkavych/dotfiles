@@ -1,4 +1,7 @@
 # Bootstrap
+# Don't clobber the things
+set -o noclobber
+
 # If not interactive, do nothing
 if [[ $- != *i* ]] ; then
     return
