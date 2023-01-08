@@ -33,6 +33,7 @@ Plug 'ambv/black'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 Plug 'romgrk/nvim-treesitter-context'
+Plug 's3rvac/vim-syntax-yara'
 
 " Autopairs
 Plug 'jiangmiao/auto-pairs'
@@ -103,8 +104,12 @@ let g:syntastic_check_on_wq = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='molokai'
 
+" YARA files
+au bufnewfile *.yar,*.yara setlocal filetype=yara
+
 " Skeleton templates
 au bufnewfile *.sh 0r ~/.templates/skeleton.sh
 au bufnewfile *.py 0r ~/.templates/skeleton.py
 au bufnewfile *.bash 0r ~/.templates/skeleton.bash
 au bufnewfile *.c 0r ~/.templates/skeleton.c
+au bufnewfile *.yar 0r ~/.templates/skeleton.yar
