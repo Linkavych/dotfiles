@@ -75,8 +75,8 @@ alias userlist="cut -d: -f1 /etc/passwd"
 #------------------#
 #     Shutdown     #
 #------------------#
-alias sss='doas shutdown -p now'
-alias rrr='doas shutdown -r now'
+alias sss='sudo shutdown -p now'
+alias rrr='sudo shutdown -r now'
 
 #------------------#
 #    libreoffice   #
