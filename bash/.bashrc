@@ -113,6 +113,12 @@ ex ()
   fi
 }
 
+# URL Decoded strings
+ud ()
+{
+  echo "[+] URL Decoded: $(echo -n $1 | sed 's/%/\\x/g')"
+}
+
 # fzf
 if [[ -d '/usr/share/examples/fzf' ]]; then
     source /usr/share/examples/fzf/shell/completion.bash
@@ -135,3 +141,7 @@ eval "$(starship init bash)"
 
 # API Stuff for malware
 source ~/.config/malware.sh
+
+# Resetting PATH
+export PATH=$PATH:/usr/local/go/bin
+export PATH="$PATH:/home/linkavych/Downloads/010editor" #ADDED BY 010 EDITOR
