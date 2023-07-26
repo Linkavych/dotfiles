@@ -47,8 +47,6 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'Pocco81/TrueZen.nvim'
-
 call plug#end()
 
 colorscheme gruvbox

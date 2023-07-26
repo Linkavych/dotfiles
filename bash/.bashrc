@@ -48,11 +48,11 @@ shopt -s checkwinsize
 
 # Setting the Path
 if [[ -d "$HOME/.local/bin" ]]; then
-    PATH="$HOME/.local/bin:$PATH"
+    PATH="$PATH:$HOME/.local/bin"
 fi
 
 if [[ -d "$HOME/.bin" ]]; then
-    PATH="$HOME/.bin:$PATH"
+    PATH="$PATH:$HOME/.bin"
 fi
 
 # Sourcing aliases
@@ -136,12 +136,8 @@ fi
 # Starship Prompt
 eval "$(starship init bash)"
 
-# Rust Stuff
-. "$HOME/.cargo/env"
-
 # API Stuff for malware
 source ~/.config/malware.sh
 
 # Resetting PATH
-export PATH=$PATH:/usr/local/go/bin
-export PATH="$PATH:/home/linkavych/Downloads/010editor" #ADDED BY 010 EDITOR
+export PATH="$PATH:/home/linkavych/.cargo/bin:/usr/local/go/bin"

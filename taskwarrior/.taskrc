@@ -24,10 +24,11 @@ data.location=/home/linkavych/.task
 #hooks.location=~/.config/task/hooks
 
 # Color theme (uncomment one to use)
+include ~/.config/taskwarrior/gruvbox-dark-256.theme
 #include light-16.theme
 #include light-256.theme
 #include dark-16.theme
-#include dark-256.theme
+#include /usr/local/share/doc/task/rc/dark-256.theme
 #include dark-red-256.theme
 #include dark-green-256.theme
 #include dark-blue-256.theme
@@ -35,10 +36,11 @@ data.location=/home/linkavych/.task
 #include dark-yellow-green.theme
 #include dark-gray-256.theme
 #include dark-gray-blue-256.theme
-include /usr/local/share/doc/task/rc/solarized-dark-256.theme
+#include /usr/local/share/doc/task/rc/solarized-dark-256.theme
 #include solarized-light-256.theme
 #include no-color.theme
 
 # Custom
 verbose=yes
 news.version=2.6.0
+regex=on
