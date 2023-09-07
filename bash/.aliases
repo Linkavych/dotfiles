@@ -37,16 +37,6 @@ alias lt='ls --long --header --git --group --sort=modified --reverse'
 alias tree='ls --long --all --header --git --group --recurse --level=2 --tree'
 
 #------------------#
-#       lsd        #
-#------------------#
-#alias ls='lsd'
-#alias la='ls -a'
-#alias ll='ls -la'
-#alias lt='ls --tree'
-#alias lt2='ls --tree --depth 2'
-#alias ='ls -laX' #sort by file extension
-
-#------------------#
 #   Network Info   #
 #------------------#
 #alias ports='sockstat -l'
