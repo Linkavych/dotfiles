@@ -25,6 +25,8 @@ alias du='du -h'
 alias mkdir='mkdir -pv'
 alias src='source ~/.bashrc'
 
+alias sus='sort | uniq -c | sort -nr'
+
 #------------------#
 #        exa       #
 #------------------#
@@ -40,7 +42,7 @@ alias tree='ls --long --all --header --git --group --recurse --level=2 --tree'
 #   Network Info   #
 #------------------#
 #alias ports='sockstat -l'
-alias cons='lsof -i'
+alias cons='lsof -Pni'
 alias ping='ping -c 5'
 
 #------------------#

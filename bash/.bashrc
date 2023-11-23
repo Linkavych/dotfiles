@@ -36,8 +36,8 @@ shopt -s expand_aliases
 shopt -s dotglob
 
 # Hist file size
-HISTSIZE=10000
-HISTFILESIZE=2000
+HISTSIZE=90000
+HISTFILESIZE=20000
 
 # History time format
 # UNIX YEAR-MO-DAY HR:MIN:SEC-TZ
@@ -141,3 +141,10 @@ source ~/.config/malware.sh
 
 # Resetting PATH
 export PATH="$PATH:/home/linkavych/.cargo/bin:/usr/local/go/bin"
+
+# add Pulumi to the PATH
+export PATH=$PATH:$HOME/.pulumi/bin
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
