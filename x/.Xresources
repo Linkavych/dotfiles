@@ -1,0 +1,106 @@
+! FONTS
+! -----------------------------------------------------------------------------
+Xft.antialias:  true
+Xft.hinting:    false
+Xft.hintstyle:  0
+Xft.dpi:        75
+Xft.rgba:       none
+
+! XTERM
+! -----------------------------------------------------------------------------
+XTerm*allowBoldFonts:     true
+XTerm*allowWindowOps:     true
+XTerm*boldMode:           false
+XTerm*charClass:          33:48,35:48,37:48,43:48,45-47:48,64:48,95:48,126:48,35:48,58:48,63:48,61:48,44:48,38:48,59:48
+XTerm*cursorBlink:        false
+XTerm*cutNewline:         true
+XTerm*eightBitInput:      false
+XTerm*eightBitControl:    false
+XTerm*eightBitOutput:     true
+XTerm*faceName:           Fira Code Nerd Font
+XTerm*faceSize:           14
+XTerm*fastScroll:         true
+XTerm*fullscreen:         false
+XTerm*internalBorder:     1
+XTerm*jumpScroll:         true
+XTerm*keepSelection:      true
+XTerm*loginShell:         true
+XTerm*metaSendsEscape:    true
+XTerm*multiScroll:        true
+XTerm*omitTranslation:    fullscreen
+XTerm*on4Clicks:          group
+XTerm*on5Clicks:          page
+XTerm*renderFont:         true
+XTerm*saveLines:          1024000
+XTerm*scaleHeight:        1.0
+XTerm*scrollKey:          true
+XTerm*scrollTtyOutput:    false
+XTerm*selectToClipboard:  true
+XTerm*SimpleMenu*font:    -*-clean-*-*-*-*-*-*-*-*-*-*-iso8859-2
+XTerm*termName:           xterm-256color
+XTerm*title:              xterm
+XTerm*utf8:               1
+XTerm*veryBoldColors:     14
+XTerm*visualBell:         False
+*VT100.geometry:     150x40
+*VT100.translations: #override                                          \n\
+    Ctrl <Key> minus:    smaller-vt-font()                           \n\
+    Ctrl <Key> plus:     larger-vt-font()                            \n\
+    Shift Ctrl <Key> C:  copy-selection(CLIPBOARD)                   \n\
+    Shift Ctrl <Key> V:  insert-selection(CLIPBOARD)                 \n\
+    Backspace:           string(0x7f)                                \n\
+    Delete:              string(0x1b) string("[#~")    
+
+! GRUVBOX DARK COLORS
+! -----------------------------------------------------------------------------
+! hard contrast: *background: #1d2021
+!*background: #282828
+! soft contrast: *background: #32302f
+!*foreground: #ebdbb2
+! Black + DarkGrey
+!*color0:  #282828
+!*color8:  #928374
+! DarkRed + Red
+!*color1:  #cc241d
+!*color9:  #fb4934
+! DarkGreen + Green
+!*color2:  #98971a
+!*color10: #b8bb26
+! DarkYellow + Yellow
+!*color3:  #d79921
+!*color11: #fabd2f
+! DarkBlue + Blue
+!*color4:  #458588
+!*color12: #83a598
+! DarkMagenta + Magenta
+!*color5:  #b16286
+!*color13: #d3869b
+! DarkCyan + Cyan
+!*color6:  #689d6a
+!*color14: #8ec07c
+! LightGrey + White
+!*color7:  #a89984
+!*color15: #ebdbb2
+
+! TokyoNight colors for Xresources
+
+*background: #24283b
+*foreground: #c0caf5
+
+*color0: #1d202f
+*color1: #f7768e
+*color2: #9ece6a
+*color3: #e0af68
+*color4: #7aa2f7
+*color5: #bb9af7
+*color6: #7dcfff
+*color7: #a9b1d6
+
+*color8: #414868
+*color9: #f7768e
+*color10: #9ece6a
+*color11: #e0af68
+*color12: #7aa2f7
+*color13: #bb9af7
+*color14: #7dcfff
+*color15: #c0caf5
