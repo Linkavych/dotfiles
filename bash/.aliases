@@ -80,8 +80,3 @@ alias calc='libreoffice --calc &'
 #   update stuff   #
 #------------------#
 alias updater='sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y'
-
-#------------------#
-#      malcat      #
-#------------------#
-alias malcat='~/opt/malcat/bin/malcat &'
